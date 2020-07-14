@@ -18,6 +18,7 @@
     "dev": "ui5 serve --port 1081 --open index.html",
     "debug": "node --inspect node_modules/.bin/ui5 serve --port 1081",
     "test": "karma start",
+    "test:jest": "jest",
     "watch:build": "npm-watch build",
     "watch": "npm-run-all prepare --parallel watch:build start"
   },
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "@openui5/ts-types": "^1.60.5",
+    "@types/jest": "^26.0.4",
     "@ui5/cli": "^2.2.4",
     "jest": "^26.1.0",
     "karma": "^5.0.9",
