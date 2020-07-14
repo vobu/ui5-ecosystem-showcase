@@ -27,6 +27,25 @@
             ],
             "cwd": "${workspaceFolder}/packages/ui5-app",
             "port": 9229
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "jest current file",
+            "program": "${workspaceFolder}/node_modules/.bin/jest",
+            "args": [
+                "${fileBasenameNoExtension}"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "disableOptimisticBPs": true,
+            "windows": {
+                "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+            },
+            "env": {
+                "DEBUG": "true"
+            },
+            "runtimeVersion": "12.18.2"
         }
     ]
 }
