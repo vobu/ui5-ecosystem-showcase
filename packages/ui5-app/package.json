@@ -33,6 +33,7 @@
   "devDependencies": {
     "@openui5/ts-types": "^1.60.5",
     "@ui5/cli": "^2.2.4",
+    "jest": "^26.1.0",
     "karma": "^5.0.9",
     "karma-chrome-launcher": "^3.1.0",
     "karma-coverage": "^2.0.2",
@@ -48,6 +49,7 @@
     "ui5-middleware-livetranspile": "^0.2.1",
     "ui5-middleware-servestatic": "^0.3.0",
     "ui5-middleware-simpleproxy": "^0.3.2",
+    "ui5-simple-require": "^2.0.0",
     "ui5-task-i18ncheck": "^0.3.0",
     "ui5-task-pwa-enabler": "^0.2.1",
     "ui5-task-stringreplacer": "^0.4.0",
