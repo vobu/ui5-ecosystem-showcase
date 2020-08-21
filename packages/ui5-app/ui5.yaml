@@ -12,6 +12,8 @@ framework:
     - name: themelib_sap_fiori_3
 builder:
   customTasks:
+  - name: ui5-task-rollup
+    afterTask: replaceVersion
   - name: ui5-task-transpile
     afterTask: replaceVersion
     configuration:

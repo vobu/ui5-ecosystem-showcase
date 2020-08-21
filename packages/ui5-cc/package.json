@@ -1,0 +1,16 @@
+{
+  "name": "ui5-cc",
+  "version": "0.0.1",
+  "description": "ui5 control that allows for copywrite-text with various formatting options",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ui5",
+    "custom",
+    "control"
+  ],
+  "author": "Volker Buzek <volker.buzek@js-soft.com>",
+  "license": "Beerware"
+}

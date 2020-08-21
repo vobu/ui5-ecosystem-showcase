@@ -1,0 +1,54 @@
+const path = require("path");
+const { nodeResolve } = require("@rollup/plugin-node-resolve");
+const cjs = require("@rollup/plugin-commonjs");
+const { babel } = require("@rollup/plugin-babel");
+const { terser } = require("rollup-plugin-terser");
+const amd = require("rollup-plugin-amd");
+
+function buildConfig(minify) {
+    const config = {
+        input: path.resolve(__dirname, "test.js"),
+        output: {
+            ui5ModuleName: `/resources/cc/Formatted${minify ? "" : "-dbg"}.js`,
+            /*
+            format: "amd",
+            amd: {
+                define: "sap.ui.define"
+            },
+            */
+            plugins: [
+                babel({
+                    presets: [
+                        ["transform-ui5", {
+                            //...pluginOpts
+                        }]
+                    ]
+                })
+            ]
+        },
+        plugins: [
+             amd(),
+            nodeResolve({
+                browser: true,
+                mainFields: ["module", "main"]
+            }),
+            cjs({
+                exclude: ["src/**", "lib/**"],
+            }),
+            babel({
+                babelHelpers: "bundled",
+                plugins:["@babel/syntax-class-properties"],
+                exclude: "node_modules/**"
+            })
+        ]
+    };
+	if (minify) {
+		config.plugins.push(terser());
+    }
+	return config;
+}
+
+module.exports = [
+    buildConfig(),
+    //buildConfig(true) // required as UI5 uglify task is using workspace.byGlobSource (which excludes generated resources from being minified)
+];
