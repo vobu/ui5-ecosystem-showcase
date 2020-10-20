@@ -27,6 +27,24 @@
             ],
             "cwd": "${workspaceFolder}/packages/ui5-app",
             "port": 9229
+        },
+        {
+            "name": "wdi5 w current file",
+            "type": "node",
+            "program": "${workspaceFolder}/node_modules/.bin/wdio",
+            "request": "launch",
+            "runtimeVersion": "12.19.0",
+            "args": [
+                "${workspaceFolder}/packages/ui5-app/wdio.conf.js",
+                "--spec",
+                "${file}"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "internalConsoleOptions": "openOnSessionStart",
+            "console": "internalConsole",
+            "autoAttachChildProcesses": true
         }
     ]
 }
