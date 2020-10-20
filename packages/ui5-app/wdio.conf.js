@@ -111,7 +111,7 @@ exports.config = {
     services: ['chromedriver', [ui5Service]],
     wdi5: {
         // path: "", // commented out to use the default paths
-        screenshotPath: path.join('test', 'report', 'screenshots'),
+        screenshotPath: path.join('webapp', 'test', 'report', 'screenshots'),
         logLevel: 'verbose', // error | verbose | silent
         platform: 'browser', // electron, browser, android, ios
         url: "index.html",

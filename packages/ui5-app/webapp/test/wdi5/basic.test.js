@@ -1,5 +1,7 @@
 describe("basics", ()=> {
     it("should navigate successfully to list page", () => {
+        browser.screenshot("before-nav")
+
         const _button = {
             selector: {
                 id: "navButton",
@@ -7,6 +9,8 @@ describe("basics", ()=> {
             }
         }
         browser.asControl(_button).firePress()
+
+        browser.screenshot("after-nav")
 
         const _list = {
             selector: {
@@ -24,6 +28,7 @@ describe("basics", ()=> {
             }
         }
         const listItems = browser.asControl(_list).getItems()
+
         expect(listItems.length).toBeGreaterThanOrEqual(1)
     })
 })
