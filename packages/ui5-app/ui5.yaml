@@ -74,23 +74,6 @@ server:
       baseUri: "https://sapui5.hana.ondemand.com/"
       limit: "5mb"
       removeETag: true
-  - name: ui5-middleware-livetranspile
-    afterMiddleware: compression
-    configuration:
-      debug: true
-      transpileAsync: true
-      excludePatterns:
-      - "lib/"
-  - name: ui5-middleware-stringreplacer
-    afterMiddleware: compression
-    configuration:
-      debug: true
-      files:
-        - "**/*.js"
-        - "**/*.xml"
-      replace:
-        - placeholder: "${project.version}"
-          value: "1.0.0-SNAPSHOT"
   - name: ui5-middleware-cfdestination
     afterMiddleware: compression
     configuration:
@@ -105,13 +88,6 @@ server:
         url: "https://services.odata.org/V2/Northwind/Northwind.svc/"
       - name: "todos"
         url: "https://jsonplaceholder.typicode.com/todos/"
-  - name: ui5-middleware-iasync
-    beforeMiddleware: serveResources
-    configuration:
-      https: false
-      debug: false
-      logConnections: true
-      port: 4711
   - name: ui5-middleware-index
     afterMiddleware: compression
     configuration:
