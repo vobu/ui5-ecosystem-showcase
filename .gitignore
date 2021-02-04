@@ -65,3 +65,6 @@ dist
 
 # WebStorm/IntelliJ IDE
 .idea
+
+# do not enforce vscode settings
+.vscode/settings.json
