@@ -1,5 +1,5 @@
 sap.ui.define(["sap/ui/core/Control", "./marked.min"], (Control /*, marked */) => {
-    return Control.extend("ui5.cc.md", {
+    return Control.extend("cc.md.Md", {
         metadata: {
             properties: {
                 content: { type: "string", defaultValue: "", bindable: "bindable" },

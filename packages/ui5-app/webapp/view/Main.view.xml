@@ -3,7 +3,7 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	displayBlock="true"
 	xmlns="sap.m"
-	xmlns:cc="ui5.cc.md">
+	xmlns:md="cc.md">
 
 	<Page id="page"
 		title="{i18n>appTitle}">
@@ -22,8 +22,8 @@
 					text="{i18n>startPage.title.text}"
 					width="100%"
 					textAlign="Center" />
-				<cc:md content="***markdown is nice!***&#13;&#10;&#13;&#10;if only there wasn't the CR problem..." />
-				<cc:md fromFile="view/MainFragment.md" />
+				<md:Md content="***markdown is nice!***&#13;&#10;&#13;&#10;if only there wasn't the CR problem..." />
+				<md:Md fromFile="view/MainFragment.md" />
 			</VBox>
 		</content>
 	</Page>

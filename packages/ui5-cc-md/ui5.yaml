@@ -1,0 +1,10 @@
+specVersion: "2.2"
+type: module
+metadata:
+  name: ui5-cc-md
+
+resources:
+  configuration:
+    paths:
+      "/resources/cc/md": "./"
+#http://localhost:1081/resources/cc/md/md.js
