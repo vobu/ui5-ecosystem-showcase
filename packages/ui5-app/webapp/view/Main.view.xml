@@ -22,8 +22,8 @@
 					text="{i18n>startPage.title.text}"
 					width="100%"
 					textAlign="Center" />
-				<md:Md content="***markdown is nice!***&#13;&#10;&#13;&#10;if only there wasn't the CR problem..." />
-				<md:Md fromFile="view/MainFragment.md" />
+				<md:Markdown content="***markdown is nice!***&#13;&#10;&#13;&#10;if only there wasn't the CR problem..." />
+				<md:Markdown fromFile="view/MainFragment.md" />
 			</VBox>
 		</content>
 	</Page>
